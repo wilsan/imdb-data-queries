@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>IMDB Data Queries</title>
+   <link rel="stylesheet" href="stylesheets/home.css">
+</head>
+
+<body>
+   <h1>IMDB Data Queries</h1>
+   <ol>
+      <li>
+         <a href='/movies?fields={"title":1,"year":1}&year-gte=2010'>
+            List the titles of all movies with a release date on or after 2010 in alphabetical
+            order.
+         </a>
+      </li>
+      <li>
+         <a href='/movies?fields={"director_name":1,"title":1,"imdb_score":1}&rating-gte=8.0'>
+            List the names of film makers who have directed a movie that received a rating
+            of at least 8.0
+         </a>
+      </li>
+      <li>
+         <a href='/movies?fields={"title":1,"actor_1":1,"actor_2":1,"actor_3":1}&cast-in=Angelina Jolie Pitt,Brad Pitt'>
+            List the titles of all movies in which both Brad Pitt and Angelina Jolie starred
+         </a>
+      </li>
+   </ol>
+</body>
+
+</html>
