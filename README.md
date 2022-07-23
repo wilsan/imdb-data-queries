@@ -6,4 +6,4 @@ The APIs for the three queries are:  <br />
 '/movies?fields={"title":1,"actor_1":1,"actor_2":1,"actor_3":1}&cast-in=Angelina Jolie Pitt,Brad Pitt'  <br />
  <br />
 The "field" parameter is used to select the fields to be displayed and the second parameter is used to query the database. <br />
-The movie dataset was obtainer from https://data.world/himan/imdb-movie-dataset/workspace/file?filename=movie_data.csv
+The movie dataset was obtained from https://data.world/himan/imdb-movie-dataset/workspace/file?filename=movie_data.csv
