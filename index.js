@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== 'production') {
+   require('dotenv').config();
+}
+
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -10,13 +14,10 @@ const LocalStrategy = require('passport-local');
 const MongoStore = require('connect-mongo');
 
 const User = require('./models/user');
-const Movie = require('./models/movie')
-const { isLoggedIn } = require('./middleware');
 const moviesRoutes = require('./routes/movies');
 const loginRoutes = require('./routes/login');
 
-// const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/imdb';
-const dbUrl = 'mongodb+srv://user-wilson:RWGFsIlgTg9BEQhW@cluster0.vuj2jlw.mongodb.net/?retryWrites=true&w=majority';
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/imdb';
 
 mongoose.connect(dbUrl)
    .then(() => {
